@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/non-buildable-lib/src",
+  "prefix": "my-org",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/non-buildable-lib"],
+      "options": {
+        "jestConfig": "libs/non-buildable-lib/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/non-buildable-lib/**/*.ts",
+          "libs/non-buildable-lib/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
